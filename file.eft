@@ -1,0 +1,77 @@
+    LSTR name
+        DWORD use_sound_file
+        LSTR sound_file_name
+        DWORD sound_loop_count
+         
+        DWORD system_count
+        :FOREACH( system_count )
+            LSTR name
+            LSTR unique_name
+            DWORD stb_index
+            LSTR ptl_file
+            DWORD use_animation
+            LSTR zmo_file
+            DWORD animation_loop_count
+            DWORD animation_stb_index
+            VECTOR3 position
+            QUARTERNION rotation
+            DWORD delay
+            DWORD is_linked
+        :ENDFOR
+         
+        DWORD animation_count
+        :FOREACH( animation_count )
+            LSTR name
+            LSTR unique_name
+            DWORD stb_index
+            LSTR zms_file
+            LSTR zmo_file
+            LSTR dds_file
+            DWORD alpha_enabled
+            DWORD two_sided
+            DWORD alpha_test_enabled
+            DWORD ztest_enabled
+            DWORD zwrite_enabled
+            E[blend_mode] source_blend
+            E[blend_mode] destination_blend
+            E[blendop_type] blend_op
+            DWORD use_animation
+            LSTR animation_name
+            DWORD animation_loop_count
+            DWORD animation_stb_index
+            VECTOR3 position
+            QUARTERNION rotation
+            DWORD delay
+            DWORD repeat_count
+            DWORD is_linked
+        :ENDFOR( animation count )
+         
+        --
+         
+        :ENUM[DWORD] blend_mode
+            ZERO = 1
+            ONE = 2
+            SRCCOLOR = 3
+            INVSRCCOLOR = 4
+            SRCALPHA = 5
+            INVSRCALPHA = 6
+            DESTALPHA = 7
+            INVDESTALPHA = 8
+            DESTCOLO = 9
+            INVDESTCOLOR = 10
+            SRCALPHASAT = 11
+            BOTHSRCALPHA = 12
+            BOTHINVSRCALPHA = 13
+            BLENDFACTOR = 14
+            INVBLENDFACTOR = 15
+            SRCCOLOR2 = 16
+            INVSRCCOLOR2 = 17
+        :ENDENUM
+         
+        :ENUM[DWORD] blendop_type
+            ADD = 1
+            SUBTRACT = 2
+            REVSUBTRACT = 3
+            MIN = 4
+            MAX = 5
+        :ENDENUM
