@@ -1,7 +1,7 @@
 # fribeft
 ROSE Online Effect File Editor
 
-Frib EFT Editor is a fully function effect file editor for ROSE Online.
+Frib EFT Editor is a fully functional effect file editor for ROSE Online.
 
 Supported features include but are not limited to:
 
